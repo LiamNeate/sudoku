@@ -1,4 +1,0 @@
-﻿  sudoku.cpp
-C:\Users\LiamN\Documents\GitHub\sudoku\sudoku\sudoku\sudoku.cpp(49,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\LiamN\Documents\GitHub\sudoku\sudoku\sudoku\sudoku.cpp(169): warning C4715: 'solveGrid': not all control paths return a value
-  sudoku.vcxproj -> C:\Users\LiamN\Documents\GitHub\sudoku\sudoku\Debug\sudoku.exe
