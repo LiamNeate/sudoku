@@ -1,7 +1,7 @@
 # Developer timeline and updates
 
 
-17/1/2022
+## 17/01/2022
 
 Found a website that has some helpful ideas on it. All of the examples are done in python so I am going to work through them and try and understand all the steps they use, so I can try and make it in C++.
 
@@ -11,11 +11,11 @@ To begin with, since I'm doing a smaller grid, my program will be a bit simpler 
 
 I have found another website that uses maths to figure out the minimum amount of squares that need to be full in order for it to be solvable. For a 4x4 grid, it needs at least 4, whole 9x9 needs 17
 
-Sudoku ideas: https://www.101computing.net/sudoku-generator-algorithm/
+** Sudoku ideas: ** https://www.101computing.net/sudoku-generator-algorithm/
 
-Minimum amount: https://math.stackexchange.com/questions/2170944/sudoku-what-is-the-relationship-between-minimum-number-of-clues-and-order-n
+** Minimum amount: ** https://math.stackexchange.com/questions/2170944/sudoku-what-is-the-relationship-between-minimum-number-of-clues-and-order-n
 
-18/1/2022
+## 18/01/2022
 
 Using the backtracking algorithm provided by 101computing.net, I have created a random board generator. Mine uses the main functionality of the backtracking, the filling in the board, and applies it to an empty board. To do this I had to first set the board to empty to begin with. I quickly realised that they use a linear way of checking each number so the boards will always look the same. I added in random numbers that randomly sets the order of the numbers that are going to be checked. This creates a unique board each time. I also had to learn how to use copy.deepcopy as I had to make a copy of the original blank board so that I could easily set the current grid back to it, if the program creates a board that doesn't work.
 
@@ -24,3 +24,9 @@ Next I had to remove random numbers from the board that the user will have to fi
 It then prints out the final grid to show the user.
 
 Next I need to convert this into C++.
+
+## 20/01/2022
+
+I have now converted the python program succesfully into C++. It was a lot harder than I had first anticipated and required me to learn a few new tools I had not yet come across such as `std::find` and `std::venctor<int>::iterator`. I learned these thanks to websites such as stackoverflow.com and cplusplus.com. Overall, I am happy with how the C++ turned out, however, the only problem is that it takes quite a while to load even the original grid without the numbers removed. Then it takes even longer to remove the numbers because of all the checks and backtracking that does. I will have to try and optimise it next.
+
+Once I have optimisation down, I need to start making the system for playing. I have got the board generated now I need to allow simple user inputs to play the game. I will start off with a simple text enter in the terminal but I will then hopefully look into GUI's that I could utilise. I doubt adding user input will take me long so I should have this uploaded soon.
