@@ -11,9 +11,9 @@ To begin with, since I'm doing a smaller grid, my program will be a bit simpler 
 
 I have found another website that uses maths to figure out the minimum amount of squares that need to be full in order for it to be solvable. For a 4x4 grid, it needs at least 4, whole 9x9 needs 17
 
-** Sudoku ideas: ** https://www.101computing.net/sudoku-generator-algorithm/
+**Sudoku ideas:** https://www.101computing.net/sudoku-generator-algorithm/
 
-** Minimum amount: ** https://math.stackexchange.com/questions/2170944/sudoku-what-is-the-relationship-between-minimum-number-of-clues-and-order-n
+**Minimum amount:** https://math.stackexchange.com/questions/2170944/sudoku-what-is-the-relationship-between-minimum-number-of-clues-and-order-n
 
 ## 18/01/2022
 
