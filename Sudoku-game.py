@@ -44,7 +44,6 @@ def solveGrid(grid):
       for value in possibles:
         #Check that this value has not already be used on this row
         if not(value in grid[row]):
-          #print("Check")
           #Check that this value has not already be used on this column
           if not value in (grid[0][col],grid[1][col],grid[2][col],grid[3][col],grid[4][col],grid[5][col],grid[6][col],grid[7][col],grid[8][col]):
             #Identify which of the 9 squares we are working on
