@@ -1,0 +1,4 @@
+﻿  Sudoku.cpp
+C:\Users\LiamN\Documents\GitHub\sudoku\sudoku - C++\temp\Sudoku\Sudoku\Sudoku.cpp(53,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\LiamN\Documents\GitHub\sudoku\sudoku - C++\temp\Sudoku\Sudoku\Sudoku.cpp(50): error C4716: 'binarySearch': must return a value
+C:\Users\LiamN\Documents\GitHub\sudoku\sudoku - C++\temp\Sudoku\Sudoku\Sudoku.cpp(170): warning C4715: 'solveGrid': not all control paths return a value

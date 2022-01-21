@@ -23,12 +23,12 @@ void readGrid(int currList[][9]) {
                 std::cout << "|";
             }
             std::cout << currList[i][x];
-            if ((x+1) % 3 == 0 && x > 0) {
+            if (x > 0 && (x+1) % 3 == 0 ) {
                 std::cout << "|";
             }
         }
         std::cout << std::endl;
-        if ((i + 1) % 3 == 0 && i > 0) {
+        if (i > 0 && (i + 1) % 3 == 0) {
             std::cout << "-------------"<<std::endl;
         }
     }
@@ -49,22 +49,20 @@ bool solveGrid(int currList[][9]) {
     srand(time(0)); //making it so it is random each time
     std::vector<int> possibles;
     for (int x = 0; x < 81; x++) {
-        for (int i = 1; i < 10; i++) {
-            possibles.push_back(i);
-        }
-        std::random_shuffle(possibles.begin(), possibles.end());
         int tempRow = x / 9;
         int tempCol = x % 9;
-        std::vector<int> colValues;
-        std::vector<int> rowValues;
-        for (int y = 0; y < 9; y++) {
-
-            colValues.push_back(currList[tempRow][y]);
-        }
-        for (int y = 0; y < 9; y++) {
-            rowValues.push_back(currList[y][tempCol]);
-        }
         if (currList[tempRow][tempCol] == 0) {
+            std::vector<int> colValues;
+            std::vector<int> rowValues;
+            for (int y = 0; y < 9; y++) {
+
+                colValues.push_back(currList[tempRow][y]);
+                rowValues.push_back(currList[y][tempCol]);
+            }
+            for (int i = 1; i < 10; i++) {
+                possibles.push_back(i);
+            }
+            std::random_shuffle(possibles.begin(), possibles.end());
             for (auto value : possibles) {
                 std::vector<int>::iterator found;
                 found = std::find(colValues.begin(), colValues.end(), value);
@@ -142,7 +140,6 @@ bool solveGrid(int currList[][9]) {
                             }
                         }
                         std::vector<int> gridValues;
-                        int tempX = 0;
                         for (int y = 0; y < 3; y++) {
                             for (int h = 0; h < 3; h++) {
                                 gridValues.push_back(square[h][y]);
