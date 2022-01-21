@@ -13,7 +13,7 @@ I have started by making a simple python program for the basic parts of the syst
 
 This project is meant to push my knowledge of C++ while also applying it to a project I am interested in. 
 
-### Update
+### Update (21/01/22)
 
 The project is currently functional for users to try however it is very basic functionality with minimal input checking. It is under _sudoku - C++/Grid maker (21.01.22)/_
 
