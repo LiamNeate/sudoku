@@ -1,5 +1,4 @@
 #include "sudoku.h"
-
 int main()
 {
     setUp();
