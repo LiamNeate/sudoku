@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -38,6 +42,22 @@ $(function() {
 </script>
 <div id="main-nav"></div>
 </div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('sudoku_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <div class="header">
   <div class="summary">
 <a href="#func-members">Functions</a>  </div>
@@ -51,8 +71,16 @@ $(function() {
 <code>#include &lt;vector&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 <code>#include &lt;time.h&gt;</code><br />
-<code>#include &lt;chrono&gt;</code><br />
-<code>#include &lt;thread&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Include dependency graph for sudoku.h:</div>
+<div class="dyncontent">
+<div class="center"><img src="sudoku_8h__incl.png" border="0" usemap="#a_c_1_2_users_2_liam_n_2_documents_2_git_hub_2sudoku_2sudoku_01-_01_c_09_09_2_sudoku_01game_01_0730_801_822_08_2_sudoku_2sudoku_8h" alt=""/></div>
+</div>
+</div><div class="textblock"><div class="dynheader">
+This graph shows which files directly or indirectly include this file:</div>
+<div class="dyncontent">
+<div class="center"><img src="sudoku_8h__dep__incl.png" border="0" usemap="#a_c_1_2_users_2_liam_n_2_documents_2_git_hub_2sudoku_2sudoku_01-_01_c_09_09_2_sudoku_01game_01_0730_801_822_08_2_sudoku_2sudoku_8hdep" alt=""/></div>
+</div>
 </div>
 <p><a href="sudoku_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -61,262 +89,10 @@ Functions</h2></td></tr>
 <tr class="memitem:a63326a1b70b6e3f070e51687798e02de"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8h.html#a63326a1b70b6e3f070e51687798e02de">setUp</a> ()</td></tr>
 <tr class="memdesc:a63326a1b70b6e3f070e51687798e02de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets up the main sudoku variables and calls the functions.  <a href="sudoku_8h.html#a63326a1b70b6e3f070e51687798e02de">More...</a><br /></td></tr>
 <tr class="separator:a63326a1b70b6e3f070e51687798e02de"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aefefe07e4bcda6805a251d34a96f8f1f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8h.html#aefefe07e4bcda6805a251d34a96f8f1f">blankGrid</a> (int currList[][9])</td></tr>
-<tr class="memdesc:aefefe07e4bcda6805a251d34a96f8f1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the grid to the initial state; blank.  <a href="sudoku_8h.html#aefefe07e4bcda6805a251d34a96f8f1f">More...</a><br /></td></tr>
-<tr class="separator:aefefe07e4bcda6805a251d34a96f8f1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4f77afb418c6e67328ff00232bbf553e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8h.html#a4f77afb418c6e67328ff00232bbf553e">solveGrid</a> (int currList[][9])</td></tr>
-<tr class="memdesc:a4f77afb418c6e67328ff00232bbf553e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates the random completed sudoku grid.  <a href="sudoku_8h.html#a4f77afb418c6e67328ff00232bbf553e">More...</a><br /></td></tr>
-<tr class="separator:a4f77afb418c6e67328ff00232bbf553e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abfdcb777727f09f1eb639731138b3f40"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8h.html#abfdcb777727f09f1eb639731138b3f40">checkGrid</a> (int currList[][9])</td></tr>
-<tr class="memdesc:abfdcb777727f09f1eb639731138b3f40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the grid has any empty spaces.  <a href="sudoku_8h.html#abfdcb777727f09f1eb639731138b3f40">More...</a><br /></td></tr>
-<tr class="separator:abfdcb777727f09f1eb639731138b3f40"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a91eeed078db2d92ec6dee0b92d140032"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8h.html#a91eeed078db2d92ec6dee0b92d140032">duplicateGrid</a> (int ogGrid[][9], int newGrid[][9])</td></tr>
-<tr class="memdesc:a91eeed078db2d92ec6dee0b92d140032"><td class="mdescLeft">&#160;</td><td class="mdescRight">Duplicates the current grid.  <a href="sudoku_8h.html#a91eeed078db2d92ec6dee0b92d140032">More...</a><br /></td></tr>
-<tr class="separator:a91eeed078db2d92ec6dee0b92d140032"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aef562d077281dc5adf1ab2921e19a8d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8h.html#aef562d077281dc5adf1ab2921e19a8d2">removeNumbers</a> (int currList[][9])</td></tr>
-<tr class="memdesc:aef562d077281dc5adf1ab2921e19a8d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a random amount of numbers from the grid.  <a href="sudoku_8h.html#aef562d077281dc5adf1ab2921e19a8d2">More...</a><br /></td></tr>
-<tr class="separator:aef562d077281dc5adf1ab2921e19a8d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a801ee0931f51276fc3fda466829a01c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8h.html#a801ee0931f51276fc3fda466829a01c7">readGrid</a> (int currList[][9])</td></tr>
-<tr class="memdesc:a801ee0931f51276fc3fda466829a01c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the current state of the grid.  <a href="sudoku_8h.html#a801ee0931f51276fc3fda466829a01c7">More...</a><br /></td></tr>
-<tr class="separator:a801ee0931f51276fc3fda466829a01c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a506a003c8ad846cc07634f8c0dd210f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8h.html#a506a003c8ad846cc07634f8c0dd210f0">play</a> (int playerGrid[][9], int startGrid[][9], int resetGrid[][9])</td></tr>
-<tr class="memdesc:a506a003c8ad846cc07634f8c0dd210f0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises the playable game once everythin has been created.  <a href="sudoku_8h.html#a506a003c8ad846cc07634f8c0dd210f0">More...</a><br /></td></tr>
-<tr class="separator:a506a003c8ad846cc07634f8c0dd210f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad8f8fefe71e936b7845284007aa95d6d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sudoku_8h.html#ad8f8fefe71e936b7845284007aa95d6d">checkGridCorr</a> (int startGrid[][9], int playerGrid[][9])</td></tr>
-<tr class="memdesc:ad8f8fefe71e936b7845284007aa95d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks that the player completed grid is the same as the solved grid.  <a href="sudoku_8h.html#ad8f8fefe71e936b7845284007aa95d6d">More...</a><br /></td></tr>
-<tr class="separator:ad8f8fefe71e936b7845284007aa95d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >The sudoku header file. </p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="aefefe07e4bcda6805a251d34a96f8f1f" name="aefefe07e4bcda6805a251d34a96f8f1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aefefe07e4bcda6805a251d34a96f8f1f">&#9670;&nbsp;</a></span>blankGrid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void blankGrid </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>currList</em>[][9]</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Sets the grid to the initial state; blank. </p>
-
-</div>
-</div>
-<a id="abfdcb777727f09f1eb639731138b3f40" name="abfdcb777727f09f1eb639731138b3f40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abfdcb777727f09f1eb639731138b3f40">&#9670;&nbsp;</a></span>checkGrid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool checkGrid </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>currList</em>[][9]</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Checks if the grid has any empty spaces. </p>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">TRUE</td><td>The grid is complete with no empty squares </td></tr>
-    <tr><td class="paramname">FALSE</td><td>The grid is incomplete with empty squars</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">currList</td><td>The current sudoku grid </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="ad8f8fefe71e936b7845284007aa95d6d" name="ad8f8fefe71e936b7845284007aa95d6d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad8f8fefe71e936b7845284007aa95d6d">&#9670;&nbsp;</a></span>checkGridCorr()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool checkGridCorr </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>startGrid</em>[][9], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>playerGrid</em>[][9]&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Checks that the player completed grid is the same as the solved grid. </p>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">TRUE</td><td>The grid is completed corerctly </td></tr>
-    <tr><td class="paramname">FALSE</td><td>The grid is completed incorrectly</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">currList</td><td>The current sudoku grid </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a91eeed078db2d92ec6dee0b92d140032" name="a91eeed078db2d92ec6dee0b92d140032"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91eeed078db2d92ec6dee0b92d140032">&#9670;&nbsp;</a></span>duplicateGrid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void duplicateGrid </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>ogGrid</em>[][9], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>newGrid</em>[][9]&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Duplicates the current grid. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">currList</td><td>The current sudoku grid </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a506a003c8ad846cc07634f8c0dd210f0" name="a506a003c8ad846cc07634f8c0dd210f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a506a003c8ad846cc07634f8c0dd210f0">&#9670;&nbsp;</a></span>play()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void play </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>playerGrid</em>[][9], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>startGrid</em>[][9], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>resetGrid</em>[][9]&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initialises the playable game once everythin has been created. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">currList</td><td>The current sudoku grid</td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">startGrid</td><td>The initial, solved grid</td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">resetGrid</td><td>A copy of the inital state of the grid, used if the user has to reset the grid </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="a801ee0931f51276fc3fda466829a01c7" name="a801ee0931f51276fc3fda466829a01c7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a801ee0931f51276fc3fda466829a01c7">&#9670;&nbsp;</a></span>readGrid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void readGrid </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>currList</em>[][9]</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Displays the current state of the grid. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">currList</td><td>The current sudoku grid </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a id="aef562d077281dc5adf1ab2921e19a8d2" name="aef562d077281dc5adf1ab2921e19a8d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aef562d077281dc5adf1ab2921e19a8d2">&#9670;&nbsp;</a></span>removeNumbers()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void removeNumbers </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>currList</em>[][9]</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Removes a random amount of numbers from the grid. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">currList</td><td>The current sudoku grid </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a id="a63326a1b70b6e3f070e51687798e02de" name="a63326a1b70b6e3f070e51687798e02de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a63326a1b70b6e3f070e51687798e02de">&#9670;&nbsp;</a></span>setUp()</h2>
 
@@ -336,43 +112,14 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4f77afb418c6e67328ff00232bbf553e" name="a4f77afb418c6e67328ff00232bbf553e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4f77afb418c6e67328ff00232bbf553e">&#9670;&nbsp;</a></span>solveGrid()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool solveGrid </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>currList</em>[][9]</td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Generates the random completed sudoku grid. </p>
-<dl class="retval"><dt>Return values</dt><dd>
-  <table class="retval">
-    <tr><td class="paramname">TRUE</td><td>The grid is solved </td></tr>
-    <tr><td class="paramname">FALSE</td><td>The grid is unsolvable and hence, unsolved</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">currList</td><td>The current sudoku grid </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="sudoku_8h.html">sudoku.h</a></li>
+    <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.3 </li>
+  </ul>
+</div>
 </body>
 </html>
