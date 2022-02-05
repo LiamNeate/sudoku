@@ -120,30 +120,6 @@ Grid::~Grid() {
     }
 }
 
-void setUp() {
-    srand(time(NULL)); //making it so it is random each time
-    Grid completeGrid;
-    std::cout << "Loading new grid, please wait..." << std::endl;
-    bool solved = completeGrid.solveGrid();
-    while (solved != true) {
-        (&completeGrid)->~Grid();
-        new (&completeGrid) Grid();
-        completeGrid.readGrid();
-        solved = completeGrid.solveGrid();
-    }
-    completeGrid.readGrid();
-    std::cout << std::endl << "New grid made!" << std::endl;
-    Grid playerGrid;
-    Grid tempGrid;
-    playerGrid.dupeGrid(completeGrid);
-    tempGrid.dupeGrid(completeGrid);
-    std::cout << std::endl << "Loading sudoko puzzle..." << std::endl;
-    playerGrid.removeNumbers(tempGrid);
-    completeGrid.readGrid();
-    playerGrid.readGrid();
-    playerGrid.play(completeGrid, playerGrid);
-}
-
 bool Grid::solveGrid() {
     std::vector<int> possibles;
     for (int x = 0; x < 81; x++) {
@@ -376,4 +352,27 @@ bool Grid::checkGridCorr(Grid corrGrid) {
         }
     }
     return true;
+}
+
+void setUp() {
+    srand(time(NULL)); //making it so it is random each time
+    Grid completeGrid;
+    std::cout << "Loading new grid, please wait..." << std::endl;
+    bool solved = completeGrid.solveGrid();
+    while (solved != true) {
+        (&completeGrid)->~Grid();
+        new (&completeGrid) Grid();
+        completeGrid.readGrid();
+        solved = completeGrid.solveGrid();
+    }
+    completeGrid.readGrid();
+    std::cout << std::endl << "New grid made!" << std::endl;
+    Grid playerGrid;
+    Grid tempGrid;
+    playerGrid.dupeGrid(completeGrid);
+    tempGrid.dupeGrid(completeGrid);
+    std::cout << std::endl << "Loading sudoko puzzle..." << std::endl;
+    playerGrid.removeNumbers(tempGrid);
+    playerGrid.readGrid();
+    playerGrid.play(completeGrid, playerGrid);
 }
