@@ -1,6 +1,6 @@
 ﻿  Sudoku.cpp
-C:\Users\LiamN\Documents\GitHub\sudoku\sudoku - C++\Sudoku game (30.01.22)\Sudoku\Sudoku.cpp(95,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\LiamN\Documents\GitHub\sudoku\sudoku - C++\Sudoku game (30.01.22)\Sudoku\Sudoku.cpp(307,11): warning C4804: '>': unsafe use of type 'bool' in operation
-C:\Users\LiamN\Documents\GitHub\sudoku\sudoku - C++\Sudoku game (30.01.22)\Sudoku\Sudoku.cpp(307,29): warning C4804: '>': unsafe use of type 'bool' in operation
-C:\Users\LiamN\Documents\GitHub\sudoku\sudoku - C++\Sudoku game (30.01.22)\Sudoku\Sudoku.cpp(235): warning C4715: 'Grid::solveGrid': not all control paths return a value
+C:\Users\LiamN\Documents\GitHub\sudoku\sudoku - C++\Sudoku game (30.01.22)\Sudoku\Sudoku.cpp(308,11): warning C4804: '>': unsafe use of type 'bool' in operation
+C:\Users\LiamN\Documents\GitHub\sudoku\sudoku - C++\Sudoku game (30.01.22)\Sudoku\Sudoku.cpp(308,29): warning C4804: '>': unsafe use of type 'bool' in operation
+C:\Users\LiamN\Documents\GitHub\sudoku\sudoku - C++\Sudoku game (30.01.22)\Sudoku\Sudoku.cpp(354,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\LiamN\Documents\GitHub\sudoku\sudoku - C++\Sudoku game (30.01.22)\Sudoku\Sudoku.cpp(236): warning C4715: 'Grid::solveGrid': not all control paths return a value
   Sudoku.vcxproj -> C:\Users\LiamN\Documents\GitHub\sudoku\sudoku - C++\Sudoku game (30.01.22)\x64\Debug\Sudoku.exe

@@ -95,7 +95,6 @@ class Grid {
             @retval FALSE   The current grid cannot be completed.
             \sa setUp()
         */
-        bool solved;
 };
 
 int main()
@@ -109,7 +108,6 @@ Grid::Grid() {
         int col = i % 9;
         playerGrid[row][col] = 0;
     }
-    solved = false;
 }
 
 Grid::~Grid() {
@@ -128,13 +126,11 @@ bool Grid::solveGrid() {
         if (playerGrid[tempRow][tempCol] == 0) {
             std::vector<int> colValues;
             std::vector<int> rowValues;
-            for (int y = 0; y < 9; y++) {
-
+            for (int y = 0; y < 9; y++) 
+            {
                 colValues.push_back(playerGrid[tempRow][y]);
                 rowValues.push_back(playerGrid[y][tempCol]);
-            }
-            for (int i = 1; i < 10; i++) {
-                possibles.push_back(i);
+                possibles.push_back(y+1);
             }
             std::random_shuffle(possibles.begin(), possibles.end());
             for (auto value : possibles) {
@@ -214,9 +210,9 @@ bool Grid::solveGrid() {
                             }
                         }
                         std::vector<int> gridValues;
-                        for (int y = 0; y < 3; y++) {
+                        for (int z = 0; z < 3; z++) {
                             for (int h = 0; h < 3; h++) {
-                                gridValues.push_back(square[h][y]);
+                                gridValues.push_back(square[h][z]);
                             }
                         }
                         found = std::find(gridValues.begin(), gridValues.end(), value);
@@ -362,7 +358,6 @@ void setUp() {
     while (solved != true) {
         (&completeGrid)->~Grid();
         new (&completeGrid) Grid();
-        completeGrid.readGrid();
         solved = completeGrid.solveGrid();
     }
     completeGrid.readGrid();
